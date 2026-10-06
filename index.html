@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="no" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Theory and Reality som linjenett</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <aside id="sidebar">
+    <div id="masthead">
+      <h1>Theory and Reality<br>som linjenett</h1>
+      <p>Peter Godfrey-Smith, 2. utgave. Tjue tradisjoner, sju tidssoner.</p>
+    </div>
+
+    <div id="search-wrap">
+      <input id="search" type="search" placeholder="Søk etter person eller teori" autocomplete="off">
+    </div>
+    <ul id="results"></ul>
+
+    <div id="legend-head">
+      <span>Linjer</span>
+      <button id="show-all">Vis alle</button>
+    </div>
+    <ul id="legend"></ul>
+  </aside>
+
+  <main id="stage">
+    <div id="toolbar">
+      <button id="zoom-out" title="Zoom ut" aria-label="Zoom ut">&minus;</button>
+      <button id="zoom-in" title="Zoom inn" aria-label="Zoom inn">+</button>
+      <button id="zoom-fit">Tilpass</button>
+      <button id="theme">Lyst</button>
+    </div>
+
+    <div id="scroller">
+      <svg id="map" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Linjenettkart over teorier og personer i Theory and Reality"></svg>
+    </div>
+
+    <p id="hint">Klikk en stasjon for detaljer. Dra for å panorere, ctrl og rulle for å zoome. Shift-klikk en linje i listen for å vise bare den.</p>
+
+    <aside id="panel" aria-live="polite">
+      <button id="panel-close" class="close" aria-label="Lukk">&times;</button>
+      <div id="panel-body"></div>
+    </aside>
+  </main>
+
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
